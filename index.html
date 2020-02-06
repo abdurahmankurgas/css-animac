@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css animacija</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background: #050210;
+		}
+
+		.lomim {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+			animation: animate 0.5s linear infinite;
+		}
+
+		.lomim-jace {
+			position: absolute;
+			width: 270px;
+			height: 270px;
+			border-radius: 50%;
+			animation: animate2 1s linear infinite;
+			background: rgba(114, 99, 99, 0.137);
+		}
+
+		@keyframes animate {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			
+			}
+		}
+
+		@keyframes animate2 {
+			0% {
+				transform: scale(0);
+			}
+			100% {
+				transform: scale(1);
+			
+			}
+		}
+
+		.lomim span {
+			position: absolute;
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+		}
+
+		
+		.lomim span:nth-child(1) {
+			filter: blur(5px);
+		}
+
+		.lomim span:nth-child(2) {
+			filter: blur(10px);
+		}
+
+		.lomim span:nth-child(3) {
+			filter: blur(25px);
+		}
+
+		.lomim:after {
+			content: '';
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			right: 20px;
+			bottom: 20px;
+			background: #050210;
+			border-radius: 50%;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="lomim">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="lomim-jace">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</body>
+</html>
